@@ -1,9 +1,8 @@
-import express, { Request, Response, Router } from 'express';
+import Router,{ Request, Response } from 'express';
 
-const router = express();
+const inst_Routes = Router();
 
-
-router.get('/teste', async (req: Request, res: Response) => {
+inst_Routes.post('/teste', async (req: Request, res: Response) => {
   try {
     
     return res.send("Teste");
@@ -12,4 +11,4 @@ router.get('/teste', async (req: Request, res: Response) => {
   }
 });
   
-  export {router};
+export {inst_Routes};
